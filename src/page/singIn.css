@@ -1,0 +1,10 @@
+.bg-dark{
+    background-color: #12002b;
+
+}
+.main{
+    width: 100%;
+    height: 770px;
+    display: flex;
+    align-items: start;
+}
