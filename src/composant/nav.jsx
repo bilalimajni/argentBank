@@ -1,17 +1,48 @@
-// Header.jsx
-
 import React from "react";
-import "./nav.css"; // Utilisez un chemin relatif
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { clearAuth } from "../redux";
+import "./nav.css";
 
 function Nav() {
-  return (
+  const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const handleSignOut = () => {
+    dispatch(clearAuth());
+    navigate("/");
+  };
+
+  const handleLogoClick = () => {
+    navigate("/");
+  };
+
+  return isAuthenticated ? (
+    <nav className="main-nav">
+      <div onClick={handleLogoClick}>
+        <img
+          className="main-nav-logo-image"
+          src="./img/argentBankLogo.png"
+          alt="Argent Bank Logo"
+        />
+      </div>
+      <div class="main-nav-item">
+        <div className="usericon">
+          <i class="fa fa-user-circle"></i>
+          <p>tony</p>
+        </div>
+        <div onClick={handleSignOut}>
+          <i class="fa fa-sign-out"> Sign Out </i>
+        </div>
+      </div>
+    </nav>
+  ) : (
     <nav className="main-nav">
       <div>
         <img
           className="main-nav-logo-image"
           src="./img/argentBankLogo.png"
-          alt="j"
+          alt="Argent Bank Logo"
         />
       </div>
       <div class="main-nav-item">
