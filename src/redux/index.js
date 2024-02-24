@@ -1,6 +1,5 @@
-import { configureStore, createSlice } from "@reduxjs/toolkit";
+import {  createSlice } from "@reduxjs/toolkit";
 
-// Définition du slice
 const authSlice = createSlice({
   name: "auth",
   initialState: {
@@ -24,12 +23,4 @@ const authSlice = createSlice({
 
 export const { setAuth, clearAuth } = authSlice.actions;
 
-export const mainStore = configureStore({
-  reducer: {
-    auth: authSlice.reducer,
-  },
-});
-
-
-
-export default mainStore;
+export default authSlice.reducer;

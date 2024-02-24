@@ -5,6 +5,8 @@ import { clearAuth } from "../redux";
 import "./nav.css";
 
 function Nav() {
+  const profileState = useSelector((state) => state.profile);
+  const userName = profileState.profile?.body?.userName || "";
   const isAuthenticated = useSelector((state) => state.auth.isAuthenticated);
   const navigate = useNavigate();
   const dispatch = useDispatch();
@@ -29,7 +31,7 @@ function Nav() {
       <div class="main-nav-item">
         <div className="usericon">
           <i class="fa fa-user-circle"></i>
-          <p>tony</p>
+          <p>{userName}</p>
         </div>
         <div onClick={handleSignOut}>
           <i class="fa fa-sign-out"> Sign Out </i>
