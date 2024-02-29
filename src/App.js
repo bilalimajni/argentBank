@@ -12,14 +12,14 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Index />} />
-        <Route path="/SingIn" element={<SingIn />} />
+        <Route path="/login" element={<SingIn />} />
         
         {isAuthenticated ? (
-          <Route path="/User" element={<User />} />
+          <Route path="/profile" element={<User />} />
         ) : (
           <Route
-            path="/User"
-            element={<Navigate to="/SingIn" replace />}
+            path="/profile"
+            element={<Navigate to="/login" replace />}
           />
         )}
       </Routes>

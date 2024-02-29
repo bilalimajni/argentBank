@@ -29,10 +29,12 @@
     margin: 0;
     font-size: 2.5rem;
     font-weight: bold;
+    text-align: left;
 }
 
 .account-amount-description {
     margin: 0;
+    text-align: left;
 }
 
 .transaction-button {
@@ -47,6 +49,10 @@
     color: #fff;
 }
 
+.account-content-wrapper  {
+    width: 80%;
+}
+
 
 @media (min-width: 720px) {
     .account {
@@ -57,4 +63,5 @@
     .account-content-wrapper.cta {
         flex: 0;
     }
+   
 }

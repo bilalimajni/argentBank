@@ -63,45 +63,74 @@ function User() {
 
   return (
     <>
-      <header></header>
       <Nav />
-      <main className="">
-        <div className="header">
-          <h1>
-            Welcome back
-            <br />
-            {firstName} {lastName}
-          </h1>
-          <button onClick={editForm} className="edit-button">
-            Edit Name
-          </button>
-        </div>
-
-        {editing && (
+      <main className="dark">
+        {editing ? (
           <>
-            <form>
-              <label htmlFor="newUserName">New User Name:</label>
-              <input
-                type="text"
-                id="newUserName"
-                value={newUserName}
-                onChange={(e) => setNewUserName(e.target.value)}
-              />
-              <br />
-              <label>Last Name:</label>
-              <input type="text" value={lastName} disabled />
-              <br />
-              <label>First Name:</label>
-              <input type="text" value={firstName} disabled />
-              <br />
-              <button type="button" onClick={handleSave}>
-                Save
-              </button>
-              <button type="button" onClick={handleCancel}>
-                Cancel
-              </button>
+            <form className="from">
+              <h3> Edit user info</h3>
+              <div>
+                <div>
+                  <label className="LABEL-EDIT" htmlFor="newUserName"> User Name:</label>
+                  <input
+                    className="input-user-edit"
+                    type="text"
+                    id="newUserName"
+                    defaultValue={newUserName}
+                    onChange={(e) => setNewUserName(e.target.value)}
+                  />
+                </div>
+                <br />
+                <div>
+                  <label className="LABEL-EDIT">Last Name:</label>
+                  <input
+                    className="input-user-edit"
+                    type="text"
+                    value={lastName}
+                    disabled
+                  />
+                </div>
+                <br />
+                <div>
+                  <label className="LABEL-EDIT">First Name:</label>
+                  <input
+                    className="input-user-edit"
+                    type="text"
+                    value={firstName}
+                    disabled
+                  />
+                </div>
+                <br />
+              </div>
+              <div className="div-button">
+                <button
+                  className="input-eddit"
+                  type="button"
+                  onClick={handleSave}
+                >
+                  Save
+                </button>
+                <button
+                  className="input-eddit"
+                  type="button"
+                  onClick={handleCancel}
+                >
+                  Cancel
+                </button>
+              </div>
             </form>
           </>
+        ) : (
+          <div className="header">
+            <h1>
+              Welcome back
+              <br />
+              {firstName} {lastName}
+            </h1>
+            <button onClick={editForm} className="edit-button">
+              Edit Name
+            </button>
+          </div>
         )}
 
         <AcountWapper />

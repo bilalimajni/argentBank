@@ -32,7 +32,7 @@ const AcountWapper = () => {
             </p>
             <div></div>
           </div>
-          <div className='class="account-content-wrapper cta"'>
+          <div className="account-content-wrapper cta">
             <button className="transaction-button">View transactions</button>
           </div>
         </section>

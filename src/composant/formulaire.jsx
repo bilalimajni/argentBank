@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./formmulaire.css";
-import { useDispatch ,useSelector} from "react-redux";
+import { useDispatch } from "react-redux";
 import { setAuth } from "../redux";
 import { setProfile } from "../redux/setprofil";
 import { useNavigate } from "react-router-dom";
@@ -14,7 +14,7 @@ function StaticForm() {
   });
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const token = useSelector(state => state.auth.token);
+ 
  
   
 
@@ -52,7 +52,7 @@ function StaticForm() {
         dispatch(setAuth({ token: data.body.token }));
         
         
-        navigate("/user"); 
+        navigate("/profile"); 
 
         fetch("http://localhost:3001/api/v1/user/profile", {
           method: "POST",
@@ -70,12 +70,14 @@ function StaticForm() {
           })
           .catch((error) => {
             console.error("Erreur lors de la récupération du profil :", error);
+          
           });
 
        
       })
       .catch((error) => {
         console.error("Erreur :", error);
+        alert("email ou mot de passe incorrect")
       });
   };
 
