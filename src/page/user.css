@@ -16,11 +16,12 @@ h1 {
     font-weight: bold;
 }
 
+
 .dark {
     background-color: #12002b;
     display: flex;
     flex-direction: column;
-    height: auto;
+   
 }
 
 .edit-button {
@@ -73,6 +74,13 @@ h1 {
 }
 .header h1{
     text-align: center;
+}
+.edit-mode{
+    background-color: #12002b;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+
 }
 
 @media (min-width: 720px) {

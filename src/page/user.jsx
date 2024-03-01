@@ -64,7 +64,7 @@ function User() {
   return (
     <>
       <Nav />
-      <main className="dark">
+      <main className={editing ? 'edit-mode' : 'dark'}>
         {editing ? (
           <>
             <form className="from">
