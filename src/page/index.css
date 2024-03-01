@@ -1,9 +1,7 @@
-background-image{
-    width: 100%;
-}
+
 .hero {
     position: relative;
-    background-position: 0 -50px;
+    background-position: 0% 33%;
     background-size: cover;
     background-repeat: no-repeat;
     height: 400px;
@@ -40,6 +38,10 @@ p {
 }
 
 @media (max-width: 920px) {
+    .hero{
+        background-position: 0 -50px;
+        height: 300px;
+    }
     .hero-content {
         position: relative;
         top: 2rem;

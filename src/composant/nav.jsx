@@ -20,6 +20,9 @@ function Nav() {
   const handleLogoClick = () => {
     navigate("/");
   };
+  const handleUserCircle = () => {
+    navigate("/profile");
+  };
 
   return isAuthenticated ? (
     <nav className="main-nav">
@@ -30,14 +33,14 @@ function Nav() {
           alt="Argent Bank Logo"
         />
       </div>
-      <div class="main-nav-item">
-        <div className="usericon">
-          <i class="fa fa-user-circle"></i>
+      <div className="main-nav-item">
+        <div onClick={handleUserCircle}  className="usericon">
+          <i className="fa fa-user-circle"></i>
           <p>{userName}</p>
         </div>
         <div onClick={handleSignOut}>
           
-          <i class="fa fa-sign-out"> Sign Out </i>
+          <i className="fa fa-sign-out"> Sign Out </i>
         </div>
       </div>
     </nav>
@@ -50,7 +53,7 @@ function Nav() {
           alt="Argent Bank Logo"
         />
       </div>
-      <div class="main-nav-item">
+      <div className="main-nav-item">
         <Link to="/login" className="main-nav-item">
           <i className="fa fa-user-circle-o" aria-hidden="true"></i>
           <h1 className="seConnecter">Sign In</h1>

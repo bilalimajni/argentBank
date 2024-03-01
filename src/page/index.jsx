@@ -8,7 +8,7 @@ import Footer from '../composant/footer';
     <>
       <Nav />
       <main>
-  <div className='hero' style={{ backgroundImage: 'url(./img/bank-tree.webp)', }}>
+      <div className='hero' style={{ backgroundImage: 'url(./img/bank-tree-1.webp)', backgroundSize: 'cover' }}>
     <section className='hero-content'>
     <p className="subtitle">No fees.</p>
     <p className="subtitle">No minimum deposit.</p>

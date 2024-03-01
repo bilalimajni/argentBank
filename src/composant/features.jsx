@@ -6,17 +6,17 @@ import "./features.css";
 const FeaturesComponent = () => {
   const features = [
     {
-      image: "./img/icon-chat.png",
+      image: "./img/icon-chat.webp",
       title: "You are our #1 priority",
       description: "Need to talk to a representative? You can get in touch through our 24/7 chat or through a phone call in less than 5 minutes."
     },
     {
-      image: "./img/icon-money.png",
+      image: "./img/icon-money.webp",
       title: "Security you can trust",
       description: "We use top of the line encryption to make sure your data and money is always safe."
     },
     {
-      image: "./img/icon-money.png",
+      image: "./img/icon-security.webp",
       title: "More savings means higher rates",
       description: "The more you save with us, the higher your interest rate will be!"
     }

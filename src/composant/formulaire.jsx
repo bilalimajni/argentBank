@@ -87,7 +87,7 @@ function StaticForm() {
       <h1 className="titre">Sign In</h1>
       <form onSubmit={handleSubmit}>
         <div className="input-wrapper">
-          <label>Username</label>{" "}
+          <label>Email</label>{" "}
           <input
             type="email"
             name="email"

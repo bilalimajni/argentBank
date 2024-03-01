@@ -20,6 +20,7 @@ h1 {
     background-color: #12002b;
     display: flex;
     flex-direction: column;
+    height: auto;
 }
 
 .edit-button {
@@ -70,10 +71,16 @@ h1 {
     color: white;
     font-size: 2rem;
 }
+.header h1{
+    text-align: center;
+}
 
 @media (min-width: 720px) {
   .input-eddit{
     width: 200px;
+  }
+  .dark{
+    height: 775px;
   }
 }
 

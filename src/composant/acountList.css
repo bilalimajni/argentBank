@@ -63,5 +63,10 @@
     .account-content-wrapper.cta {
         flex: 0;
     }
+    .transaction-button {
+       
+        width: 200px;
+        
+    }
    
 }

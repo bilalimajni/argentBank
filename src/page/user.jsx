@@ -4,7 +4,7 @@ import Nav from "../composant/nav";
 import Footer from "../composant/footer";
 import AcountWapper from "../composant/acountList";
 import "./user.css";
-import { setAuth } from "../redux";
+
 import { setProfile } from "../redux/setprofil";
 
 function User() {
